@@ -1,7 +1,6 @@
 .App {
   text-align: center;
   height: auto;
-  background-color: darkgrey;
 }
 
 .App-logo {
@@ -25,6 +24,10 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+/* .Card.Body{
+  background-color: burlywood;
+} */
 
 .App-link {
   color: #61dafb;

@@ -13,8 +13,7 @@ const ToDo=()=>{
 
     const changeHandler=(e)=>{
        console.log(name)
-       setName(e.target.value);
-       
+       setName(e.target.value);       
     }
 
     const submitHandler=(e)=>{
@@ -35,35 +34,36 @@ const ToDo=()=>{
         {/* <p className='display-5'>HOTEL PRIME</p> */}
 
         <div>
-        <Navbar expand="lg" className="bg-body-darkgrey">
+        <Navbar expand="lg" className="bg-body-secondary">
             <Container>
-                <Navbar.Brand href="#">DETAIL PAGE</Navbar.Brand>
+                <Navbar.Brand href="#">HELLO TODO</Navbar.Brand>
                 <Navbar.Collapse className="justify-content-end">
                     <Navbar.Text>
-                        <Navbar.Brand href="#">HOME</Navbar.Brand>
-                        <Navbar.Brand href="#">ABOUTUS</Navbar.Brand>
-                        <Navbar.Brand href="#">LOGIN</Navbar.Brand>
+                        <p>Take a Note</p>
                     </Navbar.Text>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
         </div>
+        <br/>
 
-    <Card style={{width:'40rem',height:'15rem',left:'25rem',right:'25rem'}}>
+    <Card style={{width:'40rem',height:'10rem',left:'24rem',right:'15rem',backgroundColor:'lightgrey'}}>
         <Card.Body>
-            <Card.Title>FILLUP</Card.Title>
+            
             <form onSubmit={(e)=>submitHandler(e)}>
                 
                 <div>
-                    <label>NAME</label>
-                    <input type="text" placeholder="Enter your Name" onChange={(e)=>changeHandler(e)} name="name" value={name}/>
+                    <label><b>Write Down Here</b></label><br/>
+                    <input type="text" placeholder="Enter your Name" onChange={(e)=>changeHandler(e)} name="name" value={name} required/>
                 </div>
                 {/* <div>
                     <label>EMAIL</label>
                     <input type="email" placeholder="Enter your Email" />
                 </div> */}
+
+                <br/>   
                 
-                <Button variant="outline-success" type="submit">Add Here</Button>
+                <Button variant="outline-success" type="submit">Add Note</Button>
 
                 
 
@@ -74,11 +74,16 @@ const ToDo=()=>{
         </Card.Body>
     </Card>
     {/* <li>{JSON.stringify(list)}</li> */}
+    <p><b>Here's Your Plans</b></p>
     {name===name ?<div></div>:<div>No data</div>}
     {list.map((ob)=>{
         return <li key={ob.id}>{ob.name} <Button variant="outline-danger"  onClick={()=>deleteHandler(ob.id)}>Remove</Button></li>
     })}
+
+
     </div>
+
+    
 
 
 
