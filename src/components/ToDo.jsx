@@ -80,12 +80,6 @@ const ToDo=()=>{
         return <li key={ob.id}>{ob.name} <Button variant="outline-danger"  onClick={()=>deleteHandler(ob.id)}>Remove</Button></li>
     })}
 
-
     </div>
-
-    
-
-
-
 }
 export default ToDo;

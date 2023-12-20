@@ -5,7 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import FunctionBased from './components/FunctionBased';
 // // import {Testapps,Testapps1,} from './components/TestApps';
 // import  UseEffect  from './components/UseEffect';
-import WeatherApp from './components/weather/WeatherApp';
+// import WeatherApp from './components/weather/WeatherApp';
+import LoginSignup from './components/Loginform/LoginSignup';
 
 
 function App() {
@@ -27,7 +28,9 @@ function App() {
 
       {/* <ToDo/> */}
 
-      <WeatherApp/>
+      {/* <WeatherApp/> */}
+
+      <LoginSignup/>
       
 
       
